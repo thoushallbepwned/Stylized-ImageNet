@@ -7,22 +7,23 @@ General definitions and paths
 import argparse
 import os
 from os.path import join as pjoin
+import os
 
 ###########################################################
 #    SETTINGS THAT NEED TO BE CHANGED BY USER
 ###########################################################
 
 # TODO Dear user, please change these paths:
-IMAGENET_PATH = "/gpfs01/bethge/data/imagenet-raw/raw-data/" # TODO specify ImageNet path
-STYLIZED_IMAGENET_PATH = "/gpfs01/bethge/data/imagenet-styletransfer-v2/" # TODO specify target path: where should Stylized-ImageNet be stored?
+IMAGENET_PATH = "./data/imagenet-mini/" # TODO specify ImageNet path
+STYLIZED_IMAGENET_PATH = "./output/" # TODO specify target path: where should Stylized-ImageNet be stored?
 
-
+print("This is the working directory", os.getcwd())
 ###########################################################
 #    SETTINGS THAT USUALLY DON'T NEED TO BE CHANGED
 ###########################################################
 
 IMG_SIZE = 224
-ADAIN_RAW_PAINTINGS_DIR = "./paintings_raw/"
+ADAIN_RAW_PAINTINGS_DIR = './paintings_raw/' #"./paintings_raw/"
 ADAIN_EXCLUDED_PAINTINGS_DIR = "./paintings_excluded/"
 ADAIN_PREPROCESSED_PAINTINGS_DIR = "./paintings_preprocessed/"
 

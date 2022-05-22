@@ -19,7 +19,7 @@ import torchvision.models as models
 from torchvision.utils import save_image, make_grid
 from tensorboardX import SummaryWriter
 from PIL import Image
-
+import numpy
 import general as g
 import adain
 
@@ -198,7 +198,7 @@ def preprocess(data_loader, sourcedir, targetdir,
                                            current_class_files[counter].replace(".JPEG", ".png")) 
 
             save_image(tensor = input[img_index,:,:,:],
-                       filename = target_img_path)
+                       fp = target_img_path)
             counter += 1
 
         if i % args.print_freq == 0:
